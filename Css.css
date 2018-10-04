@@ -1,0 +1,81 @@
+body{
+  margin:0px;
+  padding:0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main{
+  width:100%;
+  height:100%;
+}
+
+h1{
+  color:#ffbe00;
+  text-align:center;
+}
+
+.emo{
+  float:left;
+  width: 23%;
+  min-height: 640px;
+  margin-left: 180px;
+}
+
+.emodiv{
+  float: left;
+  width: 90px;
+  height: 160px;
+}
+
+canvas{
+  float:left;
+}
+
+a {
+    float: left;
+    width: 70px;
+    height: 22px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #FFBE00;
+    color: white;
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.text{
+  float:left;
+  width:25%;
+  height:50px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inputtext{
+  width:200px;
+  height:22px;
+  padding:10px;
+  border-radius:15px;
+  font-size:20px;
+  color: #ffbe00;
+  font-weight:bold;
+}
+
+#canvasdisplay{
+  float: left;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  border: 1px solid grey;
+}
+
+#message{
+  text-align:center;
+  color: #ffbe00;
+  font-weight:bold;
+  font-size:25px;
+}
