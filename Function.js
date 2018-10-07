@@ -2,36 +2,40 @@ var imported = document.createElement("script");
 imported.src = "FunctionAndIfCondition.js";
 document.head.appendChild(imported);
 
+var middle = 200;
+var heightAndWidth = 400;
+
+var canvas = document.getElementById("emocanvas");
+var ctx = canvas.getContext("2d");
+
+canvas.width = canvas.height = heightAndWidth;
+
 // Clear Box before apply design
-function clear(ctx)
-{
+function clear(ctx) {
   ctx.clearRect(0, 0, 400, 400);
 }
 
 // Give Message, if text is empty, so enter radius
-function enterRadius()
-{
+function enterRadius() {
   return document.getElementById("message").innerHTML = "Enter Radius";
 }
 
 // Give Message, if text is not in the given range, so enter in range
-function notInRange()
-{
+function notInRange() {
   return document.getElementById("message").innerHTML = "Number Not in Range";
 }
 
 // It is going to delete given message
-function empty()
-{
+function empty() {
   return document.getElementById("message").innerHTML = "";
 }
 
 // Set width of lines in different range
 function width(val) {
   return (val >= 30 && val <= 40) ? ctx.lineWidth = "3" : (val >= 41 && val <= 50) ? ctx.lineWidth = "4" :
-         (val >= 51 && val <= 60) ? ctx.lineWidth = "5" : (val >= 61 && val <= 70) ? ctx.lineWidth = "6" :
-         (val >= 71 && val <= 80) ? ctx.lineWidth = "7" : (val >= 81 && val <= 90) ? ctx.lineWidth = "8" :
-         (val >= 91 && val <= 100) ? ctx.lineWidth = "9" : 0
+    (val >= 51 && val <= 60) ? ctx.lineWidth = "5" : (val >= 61 && val <= 70) ? ctx.lineWidth = "6" :
+      (val >= 71 && val <= 80) ? ctx.lineWidth = "7" : (val >= 81 && val <= 90) ? ctx.lineWidth = "8" :
+        (val >= 91 && val <= 100) ? ctx.lineWidth = "9" : 0
 }
 
 // Apply color and shape to an emoji
@@ -41,342 +45,311 @@ function design(ctx) {
   ctx.lineCap = "round";
 }
 
-function halfValue(val){
-  return val / 2 ;
+function halfValue(val) {
+  return val / 2;
 }
 
-function smile(val)
-{
+function smile(val) {
   return val - (halfValue(val)) + num567(val);
 }
 
-function sad(val)
-{
-  return 200 + num567(val) + val;
+function sad(val) {
+  return middle + num567(val) + val;
 }
 
 //
-function chin(val)
-{
+function chin(val) {
   return middle + val - num101214(val);
 }
 
-function circle(val)
-{
+function circle(val) {
   ctx.beginPath();
 
-  ctx.arc(200, 200, val, 0, 7);
+  ctx.arc(middle, middle, val, 0, 7);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function eyeCircleLeft(val)
-{
+function eyeCircleLeft(val) {
   ctx.beginPath();
 
-  ctx.arc((200 - halfValue(val)) + num345(val) , 200 - halfValue(val) + num101112(val), num567(val), 0, 7);
+  ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num101112(val), num567(val), 0, 7);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function eyeCircleRight(val)
-{
+function eyeCircleRight(val) {
   halfValue(val);
   ctx.beginPath();
 
-  ctx.arc((200 + halfValue(val)) - num345(val) , 200 - halfValue(val) + num101112(val), num567(val), 0, 7);
+  ctx.arc((middle + halfValue(val)) - num345(val), middle - halfValue(val) + num101112(val), num567(val), 0, 7);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function happysmile(val)
-{
+function happysmile(val) {
   ctx.beginPath();
 
-  ctx.arc(200, 200, smile(val), 7, 2.4);
+  ctx.arc(middle, middle, smile(val), 7, 2.4);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function eyeWinkLeft(val)
-{
+function eyeWinkLeft(val) {
   ctx.beginPath();
 
-  ctx.arc((200 - halfValue(val)) + num345(val) , 200 - halfValue(val) + num111213(val), num567(val), 3.1, 6.3);
+  ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num111213(val), num567(val), 3.1, 6.3);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function eyeWinkRight(val)
-{
+function eyeWinkRight(val) {
   halfValue(val);
   ctx.beginPath();
 
-  ctx.arc((200 + halfValue(val)) - num345(val) , 200 - halfValue(val) + num111213(val) , num567(val), 3.1, 6.3);
+  ctx.arc((middle + halfValue(val)) - num345(val), middle - halfValue(val) + num111213(val), num567(val), 3.1, 6.3);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function bigsmileline(val)
-{
+function bigsmileline(val) {
   ctx.beginPath();
 
-  ctx.moveTo(200 - (smile(val) + num369(val)), 200);
-  ctx.lineTo(200 + (smile(val) + num369(val)), 200);
+  ctx.moveTo(middle - (smile(val) + num369(val)), middle);
+  ctx.lineTo(middle + (smile(val) + num369(val)), middle);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function bigsmile(val)
-{
+function bigsmile(val) {
   ctx.beginPath();
 
-  ctx.arc(200, 200, smile(val) + num369(val), 0, 3.1);
+  ctx.arc(middle, middle, smile(val) + num369(val), 0, 3.1);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function sadsmile(val)
-{
+function sadsmile(val) {
   ctx.beginPath();
 
-  ctx.arc(200, sad(val) , smile(val) , 4 , 5.4);
+  ctx.arc(middle, sad(val), smile(val), 4, 5.4);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function bigsmileSmallLine(val){
+function bigsmileSmallLine(val) {
   ctx.beginPath();
 
-  ctx.moveTo((200 - halfValue(val)) + num345(val) , (200 + halfValue(val)) - num345(val));
-  ctx.lineTo((200 + halfValue(val)) - num345(val) , (200 + halfValue(val)) - num345(val));
+  ctx.moveTo((middle - halfValue(val)) + num345(val), (middle + halfValue(val)) - num345(val));
+  ctx.lineTo((middle + halfValue(val)) - num345(val), (middle + halfValue(val)) - num345(val));
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function eyeWinkLeftUp(val)
-{
+function eyeWinkLeftUp(val) {
   ctx.beginPath();
 
-  ctx.arc((200 - halfValue(val)) + num345(val) , 200 - halfValue(val) + num101112(val), num567(val), 0, 3.1);
+  ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num101112(val), num567(val), 0, 3.1);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function eyeWinkRightUp(val)
-{
+function eyeWinkRightUp(val) {
   ctx.beginPath();
 
-  ctx.arc((200 + halfValue(val)) - num345(val) , 200 - halfValue(val) + num101112(val), num567(val), 0, 3.1);
+  ctx.arc((middle + halfValue(val)) - num345(val), middle - halfValue(val) + num101112(val), num567(val), 0, 3.1);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function tongueLineLeft(val){
+function tongueLineLeft(val) {
   ctx.beginPath();
 
-  ctx.moveTo(200 - num81012(val), (200 + halfValue(val)) + num456(val));
-  ctx.lineTo(200 - num81012(val), (200 + halfValue(val)) + num101315(val));
+  ctx.moveTo(middle - num81012(val), (middle + halfValue(val)) + num456(val));
+  ctx.lineTo(middle - num81012(val), (middle + halfValue(val)) + num101315(val));
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function tongueLineRight(val){
+function tongueLineRight(val) {
   ctx.beginPath();
 
-  ctx.moveTo((200 + num81012(val)), (200 + halfValue(val)) + num456(val));
-  ctx.lineTo((200 + num81012(val)), (200 + halfValue(val)) + num101315(val));
+  ctx.moveTo((middle + num81012(val)), (middle + halfValue(val)) + num456(val));
+  ctx.lineTo((middle + num81012(val)), (middle + halfValue(val)) + num101315(val));
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function tonguebottom(val)
-{
+function tonguebottom(val) {
   ctx.beginPath();
 
-  ctx.arc(200, chin(val), num81012(val), 0, 3.1);
+  ctx.arc(middle, chin(val), num81012(val), 0, 3.1);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function tongueLeftbottom(val)
-{
+function tongueLeftbottom(val) {
   ctx.beginPath();
 
-  ctx.arc((200 - halfValue(val)) + num7911(val) , (200 + halfValue(val)) + num123(val), num6810(val), 6.7 , 3.8);
+  ctx.arc((middle - halfValue(val)) + num7911(val), (middle + halfValue(val)) + num123(val), num6810(val), 6.7, 3.8);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function tongueRightbottom(val)
-{
+function tongueRightbottom(val) {
   ctx.beginPath();
 
-  ctx.arc((200 + halfValue(val)) - num7911(val) , (200 + halfValue(val)) + num123(val), num6810(val), 5.6 , 2.7);
+  ctx.arc((middle + halfValue(val)) - num7911(val), (middle + halfValue(val)) + num123(val), num6810(val), 5.6, 2.7);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function smilecircle(val)
-{
+function smilecircle(val) {
   ctx.beginPath();
 
-  ctx.arc(200, 200 + halfValue(val) - num567(val), num101315(val), 0, 8);
+  ctx.arc(middle, middle + halfValue(val) - num567(val), num101315(val), 0, 8);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function eyeHalfLeft(val)
-{
+function eyeHalfLeft(val) {
   ctx.beginPath();
 
-  ctx.arc((200 - halfValue(val)) + num345(val) , 200 - halfValue(val) + num101112(val), num567(val), 0.7, 3.6);
+  ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num101112(val), num567(val), 0.7, 3.6);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function eyeHalfRight(val)
-{
+function eyeHalfRight(val) {
   ctx.beginPath();
 
-  ctx.arc((200 + halfValue(val)) - num345(val) , 200 - halfValue(val) + num101112(val), num567(val), 5.9, 2.6);
+  ctx.arc((middle + halfValue(val)) - num345(val), middle - halfValue(val) + num101112(val), num567(val), 5.9, 2.6);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function eyeSadLeft(val)
-{
+function eyeSadLeft(val) {
   ctx.beginPath();
 
-  ctx.arc((200 - halfValue(val)) + num345(val), 200, num567(val), 5.8, 3);
+  ctx.arc((middle - halfValue(val)) + num345(val), middle, num567(val), 5.8, 3);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function eyeSadRight(val)
-{
+function eyeSadRight(val) {
   ctx.beginPath();
 
-  ctx.arc((200 + halfValue(val)) - num345(val), 200, num567(val), 6.5, 3.6);
+  ctx.arc((middle + halfValue(val)) - num345(val), middle, num567(val), 6.5, 3.6);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function extraSadsmile(val)
-{
+function extraSadsmile(val) {
 
   ctx.beginPath();
 
-  ctx.arc(200, sad(val) + num345(val), smile(val) , 4 , 5.4);
+  ctx.arc(middle, sad(val) + num345(val), smile(val), 4, 5.4);
   ctx.stroke();
 
   ctx.closePath();
 }
 
-function laughSideCircleLeft(val)
-{
+function laughSideCircleLeft(val) {
   ctx.beginPath();
-  ctx.arc((200 - val) + num234(val), 200 + num678(val) - num012(val), num7911(val), 0, 7);
+  ctx.arc((middle - val) + num234(val), middle + num678(val) - num012(val), num7911(val), 0, 7);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function laughSideCircleRight(val)
-{
+function laughSideCircleRight(val) {
   ctx.beginPath();
 
-  ctx.arc((200 + val) - num234(val), 200 + num678(val) - num012(val), num7911(val), 0, 7);
+  ctx.arc((middle + val) - num234(val), middle + num678(val) - num012(val), num7911(val), 0, 7);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function laughLeftTriangle(val)
-{
+function laughLeftTriangle(val) {
   ctx.beginPath();
 
-  ctx.moveTo(200 - halfValue(val) - num234(val), 200 - num6810(val));
-  ctx.lineTo(200 - val + num81114(val), 200 + num101112(val));
-  ctx.lineTo(200 - val, 200 - num135(val));
+  ctx.moveTo(middle - halfValue(val) - num234(val), middle - num6810(val));
+  ctx.lineTo(middle - val + num81114(val), middle + num101112(val));
+  ctx.lineTo(middle - val, middle - num135(val));
   ctx.fill();
 
   ctx.closePath();
 }
 
-function laughRightTriangle(val)
-{
+function laughRightTriangle(val) {
   ctx.beginPath();
 
-  ctx.moveTo(200 + halfValue(val) + num234(val), 200 - num6810(val));
-  ctx.lineTo(200 + val - num81114(val), 200 + num101112(val));
-  ctx.lineTo(200 + val, 200 - num135(val));
+  ctx.moveTo(middle + halfValue(val) + num234(val), middle - num6810(val));
+  ctx.lineTo(middle + val - num81114(val), middle + num101112(val));
+  ctx.lineTo(middle + val, middle - num135(val));
   ctx.fill();
 
   ctx.closePath();
 }
 
-function sadSideCircleLeft(val)
-{
+function sadSideCircleLeft(val) {
   ctx.beginPath();
 
-  ctx.arc(200 - halfValue(val) - num345(val), 200 + halfValue(val) - num789(val), num7911(val), 0, 7);
+  ctx.arc(middle - halfValue(val) - num345(val), middle + halfValue(val) - num789(val), num7911(val), 0, 7);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function sadSideCircleRight(val)
-{
+function sadSideCircleRight(val) {
   ctx.beginPath();
 
-  ctx.arc(200 + halfValue(val) + num345(val), 200 + halfValue(val) - num789(val), num7911(val), 0, 7);
+  ctx.arc(middle + halfValue(val) + num345(val), middle + halfValue(val) - num789(val), num7911(val), 0, 7);
   ctx.fill();
 
   ctx.closePath();
 }
 
-function sadLeftTriangle(val)
-{
+function sadLeftTriangle(val) {
   ctx.beginPath();
 
-  ctx.moveTo(200 - halfValue(val) - num345(val), 200 - num6810(val));
-  ctx.lineTo(200 - halfValue(val) + num456(val), 200 + num101418(val));
-  ctx.lineTo(200 - val + num101214(val), 200 + num101418(val));
+  ctx.moveTo(middle - halfValue(val) - num345(val), middle - num6810(val));
+  ctx.lineTo(middle - halfValue(val) + num456(val), middle + num101418(val));
+  ctx.lineTo(middle - val + num101214(val), middle + num101418(val));
   ctx.fill();
 
   ctx.closePath();
 }
 
-function sadRightTriangle(val)
-{
+function sadRightTriangle(val) {
   ctx.beginPath();
 
-  ctx.moveTo(200 + halfValue(val) + num345(val), 200 - num6810(val));
-  ctx.lineTo(200 + halfValue(val) - num456(val), 200 + num101418(val));
-  ctx.lineTo(200 + val - num101214(val), 200 + num101418(val));
+  ctx.moveTo(middle + halfValue(val) + num345(val), middle - num6810(val));
+  ctx.lineTo(middle + halfValue(val) - num456(val), middle + num101418(val));
+  ctx.lineTo(middle + val - num101214(val), middle + num101418(val));
   ctx.fill();
 
   ctx.closePath();

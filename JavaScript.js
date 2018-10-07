@@ -1,15 +1,20 @@
-function design(ctx)
-{
-    ctx.fillStyle = "#615a5a";
-    ctx.strokeStyle = "#615a5a";
-    ctx.lineCap = "round";
-    ctx.lineWidth = "3";
+function design(ctx) {
+  ctx.fillStyle = "#615a5a";
+  ctx.strokeStyle = "#615a5a";
+  ctx.lineCap = "round";
+  ctx.lineWidth = "3";
+}
+
+function measurement(canvas) {
+  canvas.width = canvas.height = 90;
 }
 
 //First Emoji
 
-var ctx = document.getElementById("emo1").getContext("2d");
+var canvas = document.getElementById("emo1");
+var ctx = canvas.getContext("2d");
 
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -39,8 +44,10 @@ ctx.closePath();
 
 //Second Emoji
 
-ctx = document.getElementById("emo2").getContext("2d");
+var canvas = document.getElementById("emo2");
+var ctx = canvas.getContext("2d");
 
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -69,8 +76,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Third Emoji
-ctx = document.getElementById("emo3").getContext("2d");
 
+var canvas = document.getElementById("emo3");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -106,8 +116,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Fourth Emoji
-ctx = document.getElementById("emo4").getContext("2d");
 
+var canvas = document.getElementById("emo4");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -136,8 +149,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Fifth Emoji
-ctx = document.getElementById("emo5").getContext("2d");
 
+var canvas = document.getElementById("emo5");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -160,14 +176,17 @@ ctx.fill();
 ctx.closePath();
 ctx.beginPath();
 
-ctx.arc(45, 90, 25, 4 , 5.4);
+ctx.arc(45, 90, 25, 4, 5.4);
 ctx.stroke();
 
 ctx.closePath();
 
 //Sixth Emoji
-ctx = document.getElementById("emo6").getContext("2d");
 
+var canvas = document.getElementById("emo6");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -197,8 +216,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Seventh Emoji
-ctx = document.getElementById("emo7").getContext("2d");
 
+var canvas = document.getElementById("emo7");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -221,14 +243,17 @@ ctx.stroke();
 ctx.closePath();
 ctx.beginPath();
 
-ctx.arc(45, 90, 25, 4 , 5.4);
+ctx.arc(45, 90, 25, 4, 5.4);
 ctx.stroke();
 
 ctx.closePath();
 
 //Eighth Emoji
-ctx = document.getElementById("emo8").getContext("2d");
 
+var canvas = document.getElementById("emo8");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -265,8 +290,11 @@ ctx.arc(45, 46, 28, 0, 3.1);
 ctx.stroke();
 
 //Ninth Emoji
-ctx = document.getElementById("emo9").getContext("2d");
 
+var canvas = document.getElementById("emo9");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -315,8 +343,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Tenth Emoji
-ctx = document.getElementById("emo10").getContext("2d");
 
+var canvas = document.getElementById("emo10");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -351,8 +382,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Eleventh Emoji
-ctx = document.getElementById("emo11").getContext("2d");
 
+var canvas = document.getElementById("emo11");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -416,8 +450,11 @@ ctx.fill();
 ctx.closePath();
 
 //Twelveth Emoji
-ctx = document.getElementById("emo12").getContext("2d");
 
+var canvas = document.getElementById("emo12");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -446,8 +483,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Thirteenth Emoji
-ctx = document.getElementById("emo13").getContext("2d");
 
+var canvas = document.getElementById("emo13");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -476,8 +516,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Fourteenth Emoji
-ctx = document.getElementById("emo14").getContext("2d");
 
+var canvas = document.getElementById("emo14");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -506,8 +549,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Fifteenth Emoji
-ctx = document.getElementById("emo15").getContext("2d");
 
+var canvas = document.getElementById("emo15");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -536,8 +582,11 @@ ctx.stroke();
 ctx.closePath();
 
 //Sixteenth Emoji
-ctx = document.getElementById("emo16").getContext("2d");
 
+var canvas = document.getElementById("emo16");
+var ctx = canvas.getContext("2d");
+
+measurement(canvas);
 design(ctx);
 
 ctx.beginPath();
@@ -574,7 +623,7 @@ ctx.fill();
 ctx.closePath();
 ctx.beginPath();
 
-ctx.arc(65, 57, 6, 6.1 , 3.3);
+ctx.arc(65, 57, 6, 6.1, 3.3);
 ctx.fill();
 
 ctx.closePath();
