@@ -1,15 +1,15 @@
-function design(ctx) {
+function design(ctx) { // Call function to make design.
   ctx.fillStyle = "#615a5a";
   ctx.strokeStyle = "#615a5a";
   ctx.lineCap = "round";
   ctx.lineWidth = "3";
 }
 
-function measurement(canvas) {
+function measurement(canvas) { // Call to set wisth and height.
   canvas.width = canvas.height = 90;
 }
 
-//First Emoji
+//--------------------------------------------------------------First Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo1");
 var ctx = canvas.getContext("2d");
@@ -42,7 +42,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Second Emoji
+//--------------------------------------------------------------Second Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo2");
 var ctx = canvas.getContext("2d");
@@ -75,7 +75,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Third Emoji
+//--------------------------------------------------------------Third Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo3");
 var ctx = canvas.getContext("2d");
@@ -115,7 +115,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Fourth Emoji
+//--------------------------------------------------------------Fourth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo4");
 var ctx = canvas.getContext("2d");
@@ -148,7 +148,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Fifth Emoji
+//--------------------------------------------------------------Fifth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo5");
 var ctx = canvas.getContext("2d");
@@ -181,7 +181,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Sixth Emoji
+//--------------------------------------------------------------Sixth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo6");
 var ctx = canvas.getContext("2d");
@@ -215,7 +215,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Seventh Emoji
+//--------------------------------------------------------------Seventh Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo7");
 var ctx = canvas.getContext("2d");
@@ -248,7 +248,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Eighth Emoji
+//--------------------------------------------------------------Eighth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo8");
 var ctx = canvas.getContext("2d");
@@ -289,7 +289,7 @@ ctx.beginPath();
 ctx.arc(45, 46, 28, 0, 3.1);
 ctx.stroke();
 
-//Ninth Emoji
+//--------------------------------------------------------------Ninth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo9");
 var ctx = canvas.getContext("2d");
@@ -342,7 +342,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Tenth Emoji
+//--------------------------------------------------------------Tenth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo10");
 var ctx = canvas.getContext("2d");
@@ -381,7 +381,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Eleventh Emoji
+//--------------------------------------------------------------Eleventh Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo11");
 var ctx = canvas.getContext("2d");
@@ -449,7 +449,7 @@ ctx.fill();
 
 ctx.closePath();
 
-//Twelveth Emoji
+//--------------------------------------------------------------Twelfth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo12");
 var ctx = canvas.getContext("2d");
@@ -482,7 +482,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Thirteenth Emoji
+//--------------------------------------------------------------Thirteenth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo13");
 var ctx = canvas.getContext("2d");
@@ -515,7 +515,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Fourteenth Emoji
+//--------------------------------------------------------------Fourteenth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo14");
 var ctx = canvas.getContext("2d");
@@ -548,7 +548,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Fifteenth Emoji
+//--------------------------------------------------------------Fifteenth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo15");
 var ctx = canvas.getContext("2d");
@@ -581,7 +581,7 @@ ctx.stroke();
 
 ctx.closePath();
 
-//Sixteenth Emoji
+//--------------------------------------------------------------Sixteenth Emoji---------------------------------------------------------------------
 
 var canvas = document.getElementById("emo16");
 var ctx = canvas.getContext("2d");

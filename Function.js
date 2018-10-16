@@ -1,31 +1,31 @@
-var imported = document.createElement("script");
+var imported = document.createElement("script"); // Import Script file
 imported.src = "FunctionAndIfCondition.js";
 document.head.appendChild(imported);
 
 var middle = 200;
 var heightAndWidth = 400;
 
-var canvas = document.getElementById("emocanvas");
+var canvas = document.getElementById("emocanvas"); // Get emocanvas class to do operation
 var ctx = canvas.getContext("2d");
 
-canvas.width = canvas.height = heightAndWidth;
+canvas.width = canvas.height = heightAndWidth; // set width and height
 
 // Clear Box before apply design
 function clear(ctx) {
   ctx.clearRect(0, 0, 400, 400);
 }
 
-// Give Message, if text is empty, so enter radius
+// If text is empty then it display enter radius.
 function enterRadius() {
   return document.getElementById("message").innerHTML = "Enter Radius";
 }
 
-// Give Message, if text is not in the given range, so enter in range
+// If text is empty then it display number is not in range.
 function notInRange() {
-  return document.getElementById("message").innerHTML = "Number Not in Range";
+  return document.getElementById("message").innerHTML = "Number is not in range";
 }
 
-// It is going to delete given message
+// It is going to delete message.
 function empty() {
   return document.getElementById("message").innerHTML = "";
 }
@@ -45,24 +45,23 @@ function design(ctx) {
   ctx.lineCap = "round";
 }
 
-function halfValue(val) {
+function halfValue(val) { // Half the radius value
   return val / 2;
 }
 
-function smile(val) {
+function smile(val) { // Display set size of happysmile of emoji
   return val - (halfValue(val)) + num567(val);
 }
 
-function sad(val) {
+function sad(val) { // Display set size of sadsmile of emoji
   return middle + num567(val) + val;
 }
 
-//
-function chin(val) {
+function chin(val) { // Display chin of emoji
   return middle + val - num101214(val);
 }
 
-function circle(val) {
+function circle(val) { // Display circle of emoji
   ctx.beginPath();
 
   ctx.arc(middle, middle, val, 0, 7);
@@ -71,7 +70,7 @@ function circle(val) {
   ctx.closePath();
 }
 
-function eyeCircleLeft(val) {
+function eyeCircleLeft(val) { // Display circle left eye of emoji
   ctx.beginPath();
 
   ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num101112(val), num567(val), 0, 7);
@@ -80,7 +79,7 @@ function eyeCircleLeft(val) {
   ctx.closePath();
 }
 
-function eyeCircleRight(val) {
+function eyeCircleRight(val) { // Display circle right eye of emoji
   halfValue(val);
   ctx.beginPath();
 
@@ -90,7 +89,7 @@ function eyeCircleRight(val) {
   ctx.closePath();
 }
 
-function happysmile(val) {
+function happysmile(val) { // Display happy smile of emoji
   ctx.beginPath();
 
   ctx.arc(middle, middle, smile(val), 7, 2.4);
@@ -99,7 +98,7 @@ function happysmile(val) {
   ctx.closePath();
 }
 
-function eyeWinkLeft(val) {
+function eyeWinkLeft(val) { // Display left wink eye of emoji
   ctx.beginPath();
 
   ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num111213(val), num567(val), 3.1, 6.3);
@@ -108,7 +107,7 @@ function eyeWinkLeft(val) {
   ctx.closePath();
 }
 
-function eyeWinkRight(val) {
+function eyeWinkRight(val) { // Display Right wink eye of emoji
   halfValue(val);
   ctx.beginPath();
 
@@ -118,7 +117,7 @@ function eyeWinkRight(val) {
   ctx.closePath();
 }
 
-function bigsmileline(val) {
+function bigsmileline(val) { // Display big smile line of emoji
   ctx.beginPath();
 
   ctx.moveTo(middle - (smile(val) + num369(val)), middle);
@@ -128,7 +127,7 @@ function bigsmileline(val) {
   ctx.closePath();
 }
 
-function bigsmile(val) {
+function bigsmile(val) { // Display big smile of emoji
   ctx.beginPath();
 
   ctx.arc(middle, middle, smile(val) + num369(val), 0, 3.1);
@@ -137,7 +136,7 @@ function bigsmile(val) {
   ctx.closePath();
 }
 
-function sadsmile(val) {
+function sadsmile(val) { // Display sad smile of emoji
   ctx.beginPath();
 
   ctx.arc(middle, sad(val), smile(val), 4, 5.4);
@@ -146,7 +145,7 @@ function sadsmile(val) {
   ctx.closePath();
 }
 
-function bigsmileSmallLine(val) {
+function bigsmileSmallLine(val) {  // Display small line of emoji
   ctx.beginPath();
 
   ctx.moveTo((middle - halfValue(val)) + num345(val), (middle + halfValue(val)) - num345(val));
@@ -156,7 +155,7 @@ function bigsmileSmallLine(val) {
   ctx.closePath();
 }
 
-function eyeWinkLeftUp(val) {
+function eyeWinkLeftUp(val) { // Display left wink eye up of emoji
   ctx.beginPath();
 
   ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num101112(val), num567(val), 0, 3.1);
@@ -165,7 +164,7 @@ function eyeWinkLeftUp(val) {
   ctx.closePath();
 }
 
-function eyeWinkRightUp(val) {
+function eyeWinkRightUp(val) { // Display rigth wink eye up of emoji
   ctx.beginPath();
 
   ctx.arc((middle + halfValue(val)) - num345(val), middle - halfValue(val) + num101112(val), num567(val), 0, 3.1);
@@ -174,7 +173,7 @@ function eyeWinkRightUp(val) {
   ctx.closePath();
 }
 
-function tongueLineLeft(val) {
+function tongueLineLeft(val) { // Display tougue line left of emoji
   ctx.beginPath();
 
   ctx.moveTo(middle - num81012(val), (middle + halfValue(val)) + num456(val));
@@ -184,7 +183,7 @@ function tongueLineLeft(val) {
   ctx.closePath();
 }
 
-function tongueLineRight(val) {
+function tongueLineRight(val) { // Display tougue line right of emoji
   ctx.beginPath();
 
   ctx.moveTo((middle + num81012(val)), (middle + halfValue(val)) + num456(val));
@@ -194,7 +193,7 @@ function tongueLineRight(val) {
   ctx.closePath();
 }
 
-function tonguebottom(val) {
+function tonguebottom(val) { // Display tougue chin emoji
   ctx.beginPath();
 
   ctx.arc(middle, chin(val), num81012(val), 0, 3.1);
@@ -203,7 +202,7 @@ function tonguebottom(val) {
   ctx.closePath();
 }
 
-function tongueLeftbottom(val) {
+function tongueLeftbottom(val) { // Display left tougue 
   ctx.beginPath();
 
   ctx.arc((middle - halfValue(val)) + num7911(val), (middle + halfValue(val)) + num123(val), num6810(val), 6.7, 3.8);
@@ -212,7 +211,7 @@ function tongueLeftbottom(val) {
   ctx.closePath();
 }
 
-function tongueRightbottom(val) {
+function tongueRightbottom(val) { // Display right tougue 
   ctx.beginPath();
 
   ctx.arc((middle + halfValue(val)) - num7911(val), (middle + halfValue(val)) + num123(val), num6810(val), 5.6, 2.7);
@@ -221,7 +220,7 @@ function tongueRightbottom(val) {
   ctx.closePath();
 }
 
-function smilecircle(val) {
+function smilecircle(val) { // Display round smile circle 
   ctx.beginPath();
 
   ctx.arc(middle, middle + halfValue(val) - num567(val), num101315(val), 0, 8);
@@ -230,7 +229,7 @@ function smilecircle(val) {
   ctx.closePath();
 }
 
-function eyeHalfLeft(val) {
+function eyeHalfLeft(val) { // Display half left eye 
   ctx.beginPath();
 
   ctx.arc((middle - halfValue(val)) + num345(val), middle - halfValue(val) + num101112(val), num567(val), 0.7, 3.6);
@@ -239,7 +238,7 @@ function eyeHalfLeft(val) {
   ctx.closePath();
 }
 
-function eyeHalfRight(val) {
+function eyeHalfRight(val) { // Display half right eye 
   ctx.beginPath();
 
   ctx.arc((middle + halfValue(val)) - num345(val), middle - halfValue(val) + num101112(val), num567(val), 5.9, 2.6);
@@ -248,7 +247,7 @@ function eyeHalfRight(val) {
   ctx.closePath();
 }
 
-function eyeSadLeft(val) {
+function eyeSadLeft(val) { // Display sad half left eye 
   ctx.beginPath();
 
   ctx.arc((middle - halfValue(val)) + num345(val), middle, num567(val), 5.8, 3);
@@ -257,7 +256,7 @@ function eyeSadLeft(val) {
   ctx.closePath();
 }
 
-function eyeSadRight(val) {
+function eyeSadRight(val) { // Display sad half right eye 
   ctx.beginPath();
 
   ctx.arc((middle + halfValue(val)) - num345(val), middle, num567(val), 6.5, 3.6);
@@ -266,7 +265,7 @@ function eyeSadRight(val) {
   ctx.closePath();
 }
 
-function extraSadsmile(val) {
+function extraSadsmile(val) { // Display extra sad smile
 
   ctx.beginPath();
 
@@ -276,7 +275,7 @@ function extraSadsmile(val) {
   ctx.closePath();
 }
 
-function laughSideCircleLeft(val) {
+function laughSideCircleLeft(val) { // Display laugh side Circle left
   ctx.beginPath();
   ctx.arc((middle - val) + num234(val), middle + num678(val) - num012(val), num7911(val), 0, 7);
   ctx.fill();
@@ -284,7 +283,7 @@ function laughSideCircleLeft(val) {
   ctx.closePath();
 }
 
-function laughSideCircleRight(val) {
+function laughSideCircleRight(val) { // Display laugh side Circle right
   ctx.beginPath();
 
   ctx.arc((middle + val) - num234(val), middle + num678(val) - num012(val), num7911(val), 0, 7);
@@ -293,7 +292,7 @@ function laughSideCircleRight(val) {
   ctx.closePath();
 }
 
-function laughLeftTriangle(val) {
+function laughLeftTriangle(val) { // Display laugh side left triangle
   ctx.beginPath();
 
   ctx.moveTo(middle - halfValue(val) - num234(val), middle - num6810(val));
@@ -304,7 +303,7 @@ function laughLeftTriangle(val) {
   ctx.closePath();
 }
 
-function laughRightTriangle(val) {
+function laughRightTriangle(val) { // Display laugh side right triangle
   ctx.beginPath();
 
   ctx.moveTo(middle + halfValue(val) + num234(val), middle - num6810(val));
@@ -315,7 +314,7 @@ function laughRightTriangle(val) {
   ctx.closePath();
 }
 
-function sadSideCircleLeft(val) {
+function sadSideCircleLeft(val) { // Display sad circle left
   ctx.beginPath();
 
   ctx.arc(middle - halfValue(val) - num345(val), middle + halfValue(val) - num789(val), num7911(val), 0, 7);
@@ -324,7 +323,7 @@ function sadSideCircleLeft(val) {
   ctx.closePath();
 }
 
-function sadSideCircleRight(val) {
+function sadSideCircleRight(val) { // Display sad circle right
   ctx.beginPath();
 
   ctx.arc(middle + halfValue(val) + num345(val), middle + halfValue(val) - num789(val), num7911(val), 0, 7);
@@ -333,7 +332,7 @@ function sadSideCircleRight(val) {
   ctx.closePath();
 }
 
-function sadLeftTriangle(val) {
+function sadLeftTriangle(val) { // Display sad circle left triangle
   ctx.beginPath();
 
   ctx.moveTo(middle - halfValue(val) - num345(val), middle - num6810(val));
@@ -344,7 +343,7 @@ function sadLeftTriangle(val) {
   ctx.closePath();
 }
 
-function sadRightTriangle(val) {
+function sadRightTriangle(val) { // Display sad circle right triangle
   ctx.beginPath();
 
   ctx.moveTo(middle + halfValue(val) + num345(val), middle - num6810(val));
