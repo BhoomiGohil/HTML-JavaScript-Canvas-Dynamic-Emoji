@@ -2,8 +2,8 @@ var imported = document.createElement("script"); // Import Script file
 imported.src = "FunctionAndIfCondition.js";
 document.head.appendChild(imported);
 
-var middle = 200;
-var heightAndWidth = 400;
+var heightAndWidth = 450;
+var middle = heightAndWidth / 2;
 
 var canvas = document.getElementById("emocanvas"); // Get emocanvas class to do operation
 var ctx = canvas.getContext("2d");
@@ -12,7 +12,7 @@ canvas.width = canvas.height = heightAndWidth; // set width and height
 
 // Clear Box before apply design
 function clear(ctx) {
-  ctx.clearRect(0, 0, 400, 400);
+  ctx.clearRect(0, 0, heightAndWidth, heightAndWidth);
 }
 
 // If text is empty then it display enter radius.
@@ -31,11 +31,13 @@ function empty() {
 }
 
 // Set width of lines in different range
+
 function width(val) {
-  return (val >= 30 && val <= 40) ? ctx.lineWidth = "3" : (val >= 41 && val <= 50) ? ctx.lineWidth = "4" :
-    (val >= 51 && val <= 60) ? ctx.lineWidth = "5" : (val >= 61 && val <= 70) ? ctx.lineWidth = "6" :
-      (val >= 71 && val <= 80) ? ctx.lineWidth = "7" : (val >= 81 && val <= 90) ? ctx.lineWidth = "8" :
-        (val >= 91 && val <= 100) ? ctx.lineWidth = "9" : 0
+  var a = 2;
+  for (i = 40; i <= val; i = i + 10) {
+    a++;
+  }
+  return ctx.lineWidth = a;
 }
 
 // Apply color and shape to an emoji
@@ -120,8 +122,8 @@ function eyeWinkRight(val) { // Display Right wink eye of emoji
 function bigsmileline(val) { // Display big smile line of emoji
   ctx.beginPath();
 
-  ctx.moveTo(middle - (smile(val) + num369(val)), middle);
-  ctx.lineTo(middle + (smile(val) + num369(val)), middle);
+  ctx.moveTo(middle - (smile(val) + num357(val)), middle);
+  ctx.lineTo(middle + (smile(val) + num357(val)), middle);
   ctx.stroke();
 
   ctx.closePath();
@@ -130,7 +132,7 @@ function bigsmileline(val) { // Display big smile line of emoji
 function bigsmile(val) { // Display big smile of emoji
   ctx.beginPath();
 
-  ctx.arc(middle, middle, smile(val) + num369(val), 0, 3.1);
+  ctx.arc(middle, middle, smile(val) + num357(val), 0, 3.1);
   ctx.stroke();
 
   ctx.closePath();
@@ -205,7 +207,7 @@ function tonguebottom(val) { // Display tougue chin emoji
 function tongueLeftbottom(val) { // Display left tougue 
   ctx.beginPath();
 
-  ctx.arc((middle - halfValue(val)) + num7911(val), (middle + halfValue(val)) + num123(val), num6810(val), 6.7, 3.8);
+  ctx.arc((middle - halfValue(val)) + num567(val), (middle + halfValue(val)) + num123(val), num6810(val), 6.6, 4.2);
   ctx.stroke();
 
   ctx.closePath();
@@ -214,7 +216,7 @@ function tongueLeftbottom(val) { // Display left tougue
 function tongueRightbottom(val) { // Display right tougue 
   ctx.beginPath();
 
-  ctx.arc((middle + halfValue(val)) - num7911(val), (middle + halfValue(val)) + num123(val), num6810(val), 5.6, 2.7);
+  ctx.arc((middle + halfValue(val)) - num567(val), (middle + halfValue(val)) + num123(val), num6810(val), 5.3, 2.8);
   ctx.stroke();
 
   ctx.closePath();
@@ -317,7 +319,7 @@ function laughRightTriangle(val) { // Display laugh side right triangle
 function sadSideCircleLeft(val) { // Display sad circle left
   ctx.beginPath();
 
-  ctx.arc(middle - halfValue(val) - num345(val), middle + halfValue(val) - num789(val), num7911(val), 0, 7);
+  ctx.arc(middle - halfValue(val) - num345(val), middle + halfValue(val) - num8910(val), num6810(val) + 0.8, 0, 7);
   ctx.fill();
 
   ctx.closePath();
@@ -326,7 +328,7 @@ function sadSideCircleLeft(val) { // Display sad circle left
 function sadSideCircleRight(val) { // Display sad circle right
   ctx.beginPath();
 
-  ctx.arc(middle + halfValue(val) + num345(val), middle + halfValue(val) - num789(val), num7911(val), 0, 7);
+  ctx.arc(middle + halfValue(val) + num345(val), middle + halfValue(val) - num8910(val), num6810(val) + 0.8, 0, 7);
   ctx.fill();
 
   ctx.closePath();

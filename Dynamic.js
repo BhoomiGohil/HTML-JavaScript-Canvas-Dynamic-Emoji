@@ -2,6 +2,8 @@ var imported = document.createElement("script");
 imported.src = "Function.js";
 document.head.appendChild(imported);
 
+const min = 40, max = 200;
+
 /////////////////////////////////////////////////////////////////////Emo1////////////////////////////////////////////////////////////////////////////////////
 function emo1(val) {
   clear(ctx);
@@ -9,10 +11,10 @@ function emo1(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -32,10 +34,10 @@ function emo2(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -55,10 +57,10 @@ function emo3(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -79,10 +81,10 @@ function emo4(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -101,10 +103,10 @@ function emo5(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -124,10 +126,10 @@ function emo6(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -147,10 +149,10 @@ function emo7(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -170,10 +172,10 @@ function emo8(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -194,10 +196,10 @@ function emo9(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -213,22 +215,21 @@ function emo9(val) {
   }
 }
 
-/////////////////////////////////////////////////////////////////////////////Emo10/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////Emo10////////////////////////////////////////////////////////////////////////////////////
 function emo10(val) {
   clear(ctx);
 
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
     design(ctx);
-
 
     circle(val);
     eyeWinkLeft(val);
@@ -245,10 +246,10 @@ function emo11(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -272,10 +273,10 @@ function emo12(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -294,10 +295,10 @@ function emo13(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -316,10 +317,10 @@ function emo14(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -338,10 +339,10 @@ function emo15(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);
@@ -360,10 +361,10 @@ function emo16(val) {
   if (val == "") {
     enterRadius();
   }
-  else if (val < 40 || val > 100) {
+  else if (val < min || val > max) {
     notInRange();
   }
-  else if (val >= 40 || val <= 100) {
+  else if (val >= min || val <= max) {
     val = parseInt(val);
     empty();
     width(val);

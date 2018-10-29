@@ -5,7 +5,7 @@ function design(ctx) { // Call function to make design.
   ctx.lineWidth = "3";
 }
 
-function measurement(canvas) { // Call to set wisth and height.
+function measurement(canvas) { // Call to set width and height.
   canvas.width = canvas.height = 90;
 }
 
